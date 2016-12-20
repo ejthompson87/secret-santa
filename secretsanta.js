@@ -25,18 +25,16 @@ function person(name, email) {
     this.email = email;
 }
 
-var person1 = new person ('ADD NAME', 'ADD EMAIL');
-var person2 = new person ('ADD NAME', 'ADD EMAIL');
-var person3 = new person ('ADD NAME', 'ADD EMAIL');
-var person4 = new person ('ADD NAME', 'ADD EMAIL');
-var person5 = new person ('ADD NAME', 'ADD EMAIL');
-var person6 = new person ('ADD NAME', 'ADD EMAIL');
-
 // remember to add/remove personN to this array if have more or less than 6 people
-var toOriginal = [person1, person2, person3, person4, person5, person6];
+var participants = [new person ('ADD NAME', 'ADD EMAIL'),
+                    new person ('ADD NAME', 'ADD EMAIL'),
+                    new person ('ADD NAME', 'ADD EMAIL'),
+                    new person ('ADD NAME', 'ADD EMAIL'),
+                    new person ('ADD NAME', 'ADD EMAIL'),
+                    new person ('ADD NAME', 'ADD EMAIL')];
 
-var to = shuffle(toOriginal);
-var fromE = 'ADD YOUR EMAIL';
+var to = shuffle(participants);
+var fromEmail = 'ADD YOUR EMAIL';
 var subject = 'Kris Kringle';
 var limit = 'ADD SPENDING LIMIT';
 
@@ -74,8 +72,8 @@ function sendMessage(auth) {
                 } else {
                     KK = to[i+1].name;
                 }
-                var raw = makeBody(to[i].email, fromE, subject, makeMessage(toName, KK));
-                
+                var raw = makeBody(to[i].email, fromEmail, subject, makeMessage(toName, KK));
+
                 var gmail = google.gmail('v1');
                 gmail.users.messages.send({
                     auth: auth,
