@@ -68,8 +68,8 @@ The first time you run the sample, it will prompt you to authorize access:
 * Copy the code you're given, paste it into the command-line prompt, and press Enter.
 
 
-II. Open secretsanta.js file and make below adjustments 
-----------------------------------------------------------------
+II. Open secretsanta.js and make below adjustments 
+--------------------------------------------------
 
 *   Add all names and email addresses for people included in the Secret Santa / Kris Kringle in the 'partipants' array (from line 29)
 
