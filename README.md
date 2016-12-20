@@ -12,60 +12,60 @@ I. Follow steps below to setup Gmail API
 
 (full details in link: https://developers.google.com/gmail/api/quickstart/nodejs) 
 
-Prerequisites
+### Prerequisites
 
-    To run this quickstart, you'll need:
+To run this quickstart, you'll need:
 
-    Node.js installed.
-    The npm package management tool (comes with Node.js).
-    Access to the internet and a web browser.
-    A Google account with Gmail enabled.
+Node.js installed.
+The npm package management tool (comes with Node.js).
+Access to the internet and a web browser.
+A Google account with Gmail enabled.
     
-Step 1: Turn on the Gmail API
+### Step 1: Turn on the Gmail API
 
-    Go to: https://console.developers.google.com/flows/enableapi?apiid=gmail
-    to create or select a project in the Google Developers Console and automatically turn on the API. Click Continue, then Go to credentials.
-    
-    On the Add credentials to your project page, click the Cancel button.
-    
-    At the top of the page, select the OAuth consent screen tab. Select an Email address, enter a Product name if not already set, and click the Save button.
-    
-    Select the Credentials tab, click the Create credentials button and select OAuth client ID.
-    
-    Select the application type Other, enter the name "Gmail API Quickstart", and click the Create button.
-    
-    Click OK to dismiss the resulting dialog.
-    
-    Click the file_download (Download JSON) button to the right of the client ID.
-    
-    Move this file to your working directory and rename it client_secret.json.
+Go to: https://console.developers.google.com/flows/enableapi?apiid=gmail
+to create or select a project in the Google Developers Console and automatically turn on the API. Click Continue, then Go to credentials.
+
+On the Add credentials to your project page, click the Cancel button.
+
+At the top of the page, select the OAuth consent screen tab. Select an Email address, enter a Product name if not already set, and click the Save button.
+
+Select the Credentials tab, click the Create credentials button and select OAuth client ID.
+
+Select the application type Other, enter the name "Gmail API Quickstart", and click the Create button.
+
+Click OK to dismiss the resulting dialog.
+
+Click the file_download (Download JSON) button to the right of the client ID.
+
+Move this file to your working directory and rename it client_secret.json.
     
 
-Step 2: Install the client library
+### Step 2: Install the client library
 
-    Run the following commands to install the libraries using npm:
+Run the following commands to install the libraries using npm:
 
         $ npm install googleapis --save
         $ npm install google-auth-library --save
 
 
-Step 3: Run the Sample
+### Step 3: Run the Sample
 
-    Run the sample using the following command:
+Run the sample using the following command:
         $ node quickstart.js
 
-    NOTE: 
-    We have modified the scope from 'readonly' to 'send' in this example.  If you have used the exact example from the Gmail API setup page, you will need to delete your previously saved credentials and get new ones, at ~/.credentials/gmail-nodejs-quickstart.json
+NOTE: 
+We have modified the scope from 'readonly' to 'send' in this example.  If you have used the exact example from the Gmail API setup page, you will need to delete your previously saved credentials and get new ones, at ~/.credentials/gmail-nodejs-quickstart.json
 
-    The first time you run the sample, it will prompt you to authorize access:
+The first time you run the sample, it will prompt you to authorize access:
 
-        Browse to the provided URL in your web browser.
+* Browse to the provided URL in your web browser.
 
-        If you are not already logged into your Google account, you will be prompted to log in. If you are logged into multiple Google accounts, you will be asked to select one account to use for the authorization.
-        
-        Click the Accept button.
-        
-        Copy the code you're given, paste it into the command-line prompt, and press Enter.
+* If you are not already logged into your Google account, you will be prompted to log in. If you are logged into multiple Google accounts, you will be asked to select one account to use for the authorization.
+    
+* Click the Accept button.
+    
+* Copy the code you're given, paste it into the command-line prompt, and press Enter.
 
 
 II. Open secretsanta.js file and make below adjustments 
